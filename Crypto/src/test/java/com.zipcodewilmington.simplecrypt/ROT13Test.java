@@ -1,3 +1,5 @@
+package com.zipcodewilmington.simplecrypt;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
