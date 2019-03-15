@@ -24,7 +24,7 @@ public class EncryptFile extends ROT13 {
         return action(function);
     }
 
-    private Stream<String> getFileToStream() throws IOException {
+    public Stream<String> getFileToStream() throws IOException {
         String currentProjectDirectory = System.getProperty("user.dir");
         String resourceDirectory = currentProjectDirectory + "/Crypto/src/main/resources";
         String fileName = resourceDirectory + "/sonnet18.txt";

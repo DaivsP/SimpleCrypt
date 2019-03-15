@@ -32,7 +32,7 @@ public class EncryptFileTest {
     }
 
     @Test
-    public void decryptFile(){
-
+    public void decryptFile() throws IOException {
+        System.out.println();
     }
 }
