@@ -4,8 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
-
-import static org.junit.Assert.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class EncryptFileTest {
     EncryptFile encryptFile = new EncryptFile();
@@ -29,10 +30,5 @@ public class EncryptFileTest {
         String actual = encryptFile.encryptFile();
         Assert.assertEquals(expected, actual);
         //System.out.println(encryptFile.encryptFile());
-    }
-
-    @Test
-    public void decryptFile() throws IOException {
-        System.out.println();
     }
 }

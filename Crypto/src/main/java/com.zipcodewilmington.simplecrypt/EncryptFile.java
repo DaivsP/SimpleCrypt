@@ -1,5 +1,6 @@
 package com.zipcodewilmington.simplecrypt;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,17 +11,17 @@ import java.util.stream.Stream;
 
 public class EncryptFile extends ROT13 {
 
-    public EncryptFile(){
+    public EncryptFile() {
 
     }
 
     public String encryptFile() throws IOException {
-        Function<String, String > function = s -> encrypt(s);
-        return action(function);
+        Function<String, String> function = s -> encrypt(s);
+        return (action(function));
     }
 
-    public String decryptFile() throws IOException{
-        Function<String, String > function = s -> decrypt(s);
+    public String decryptFile() throws IOException {
+        Function<String, String> function = s -> decrypt(s);
         return action(function);
     }
 
@@ -40,7 +41,7 @@ public class EncryptFile extends ROT13 {
         return returnString;
     }
 
-    private String getString(List<String> answer) {
+    private String  getString(List<String> answer) throws IOException {
         String returnString = "";
         for (String string : answer){
             returnString += string + " \n";
@@ -48,3 +49,4 @@ public class EncryptFile extends ROT13 {
         return returnString;
     }
 }
+
